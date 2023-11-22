@@ -9,7 +9,8 @@ void simulateDiceRolls(int numSimulations) {
     // 設定亂數種子
     srand(time(NULL));
 
-    for (int i = 0; i < numSimulations; ++i) {
+    for (int i = 0; i < numSimulations; ++i)
+	{
         // 投擲兩次骰子
         int roll1 = rand() % 6 + 1;
         int roll2 = rand() % 6 + 1;
@@ -23,8 +24,9 @@ void simulateDiceRolls(int numSimulations) {
 
     // 輸出結果
     printf("點數\t出現次數\t機率\n");
-    printf("-----------------------\n");
-    for (int i = 2; i <= 12; ++i) {
+    printf("--------------------------------\n");
+    for (int i = 2; i <= 12; ++i)
+	{
         double probability = (double)pointCounts[i - 2] / numSimulations;
         printf("%d\t%d\t\t%.4f\n", i, pointCounts[i - 2], probability);
     }
